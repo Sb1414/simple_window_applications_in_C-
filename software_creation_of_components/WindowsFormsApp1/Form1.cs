@@ -14,9 +14,6 @@ namespace WindowsFormsApp1
 {
     public partial class Form1 : Form
     {
-        public string action;
-        public string numFirst;
-        public bool numSecond;
         public Form1()
         {
             InitializeComponent();
