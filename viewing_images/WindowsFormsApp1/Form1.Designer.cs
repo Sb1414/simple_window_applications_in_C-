@@ -30,6 +30,7 @@
         {
             this.panelBack = new System.Windows.Forms.Panel();
             this.labellogo = new System.Windows.Forms.Label();
+            this.buttonMinimized = new System.Windows.Forms.Button();
             this.buttonClose = new System.Windows.Forms.Button();
             this.labelPatch = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
@@ -45,6 +46,7 @@
             // 
             this.panelBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(186)))), ((int)(((byte)(158)))));
             this.panelBack.Controls.Add(this.labellogo);
+            this.panelBack.Controls.Add(this.buttonMinimized);
             this.panelBack.Controls.Add(this.buttonClose);
             this.panelBack.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelBack.Location = new System.Drawing.Point(0, 0);
@@ -65,6 +67,24 @@
             this.labellogo.Text = "Галерея";
             this.labellogo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelBack_MouseDown);
             this.labellogo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelBack_MouseMove);
+            // 
+            // buttonMinimized
+            // 
+            this.buttonMinimized.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonMinimized.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(128)))), ((int)(((byte)(87)))));
+            this.buttonMinimized.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonMinimized.FlatAppearance.BorderSize = 0;
+            this.buttonMinimized.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(237)))), ((int)(((byte)(209)))));
+            this.buttonMinimized.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(219)))), ((int)(((byte)(184)))));
+            this.buttonMinimized.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonMinimized.Font = new System.Drawing.Font("Arial Black", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonMinimized.Location = new System.Drawing.Point(572, 0);
+            this.buttonMinimized.Name = "buttonMinimized";
+            this.buttonMinimized.Size = new System.Drawing.Size(34, 33);
+            this.buttonMinimized.TabIndex = 0;
+            this.buttonMinimized.Text = "—";
+            this.buttonMinimized.UseVisualStyleBackColor = false;
+            this.buttonMinimized.Click += new System.EventHandler(this.buttonMinimized_Click);
             // 
             // buttonClose
             // 
@@ -174,6 +194,7 @@
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button buttonMinimized;
     }
 }
 
