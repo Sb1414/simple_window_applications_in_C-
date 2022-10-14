@@ -154,9 +154,9 @@
             this.panelRandomNums.Controls.Add(this.textBox1);
             this.panelRandomNums.Controls.Add(this.label1);
             this.panelRandomNums.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelRandomNums.Location = new System.Drawing.Point(0, 204);
+            this.panelRandomNums.Location = new System.Drawing.Point(0, 206);
             this.panelRandomNums.Name = "panelRandomNums";
-            this.panelRandomNums.Size = new System.Drawing.Size(511, 51);
+            this.panelRandomNums.Size = new System.Drawing.Size(511, 49);
             this.panelRandomNums.TabIndex = 3;
             // 
             // textBox2
@@ -193,7 +193,7 @@
             // 
             this.groupBoxFirst.Controls.Add(this.richTextBox1);
             this.groupBoxFirst.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBoxFirst.Location = new System.Drawing.Point(0, 28);
+            this.groupBoxFirst.Location = new System.Drawing.Point(0, 30);
             this.groupBoxFirst.Name = "groupBoxFirst";
             this.groupBoxFirst.Size = new System.Drawing.Size(511, 176);
             this.groupBoxFirst.TabIndex = 2;
@@ -236,7 +236,7 @@
             this.mExit});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(511, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(511, 30);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
