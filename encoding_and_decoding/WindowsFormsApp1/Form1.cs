@@ -69,7 +69,7 @@ namespace WindowsFormsApp1
 
         private void ToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            if (openFileDialog1.ShowDialog() == DialogResult.Cancel) return;
+            if (saveFileDialog1.ShowDialog() == DialogResult.Cancel) return;
             else
             {
                 string filename = saveFileDialog1.FileName;
@@ -79,7 +79,7 @@ namespace WindowsFormsApp1
 
         private void ToolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            if (openFileDialog1.ShowDialog() == DialogResult.Cancel) return;
+            if (saveFileDialog1.ShowDialog() == DialogResult.Cancel) return;
             else
             {
                 string filename = saveFileDialog1.FileName;
