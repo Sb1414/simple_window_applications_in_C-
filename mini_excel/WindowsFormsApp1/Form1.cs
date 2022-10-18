@@ -35,7 +35,8 @@ namespace WindowsFormsApp1
         public Form1()
         {
             InitializeComponent();
-            
+            toolStripTextBox1.Text = "Поиск";
+            toolStripTextBox1.ForeColor = Color.Gray;
         }
 
         Point lastPoint;
@@ -56,7 +57,10 @@ namespace WindowsFormsApp1
 
         private void buttonClose_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (MessageBox.Show("Возможно остались несохраненные изменения, выйти?", "Warning", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
 
 
@@ -77,6 +81,7 @@ namespace WindowsFormsApp1
 
         private void mOpen_Click(object sender, EventArgs e)
         {
+            ResetBColor();
             try
             {
                 if (openFileDialog1.ShowDialog() == DialogResult.OK)
@@ -165,34 +170,269 @@ namespace WindowsFormsApp1
             }
         }
 
-
-        /*
-        private void OpenExcelFile(string patch)
+        private void mSave_Click(object sender, EventArgs e)
         {
-            FileStream stream = File.Open(patch, FileMode.Open, FileAccess.Read);
-            IExcelDataReader reader = ExcelReaderFactory.CreateReader(stream);
-            DataSet db = reader.AsDataSet(new ExcelDataSetConfiguration()
+            ResetBColor();
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                ConfigureDataTable = (x) => new ExcelDataTableConfiguration()
+                using (StreamWriter sw = new StreamWriter(saveFileDialog1.FileName))
                 {
-                    UseHeaderRow = true
+                    try
+                    {
+                        for (int i = 0; i < dataGridView1.RowCount; i++)
+                        {
+                            for (int j = 0; j < dataGridView1.ColumnCount; j++)
+                            {
+                                sw.Write(dataGridView1.Rows[i].Cells[j].Value);
+                                if (j < dataGridView1.ColumnCount - 1) sw.Write(" ");
+                            }
+                            sw.WriteLine();
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    }
                 }
-            }) ;
-
-            tableCollection = db.Tables;
-            toolStripComboBox1.Items.Clear();
-            foreach(DataTable table in tableCollection)
-            {
-                toolStripComboBox1.Items.Add(table.TableName);
             }
-            toolStripComboBox1.SelectedIndex = 0;
+
         }
 
-        private void toolStripComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void mAddStr_Click(object sender, EventArgs e)
         {
-            DataTable table = tableCollection[Convert.ToString(toolStripComboBox1.SelectedIndex)];
-            dataGridView1.DataSource = table;
+            ResetBColor();
+            try
+            {
+                if (dataGridView1.CurrentRow != null)
+                {
+                    dataGridView1.Rows.Insert(dataGridView1.CurrentRow.Index);
+                }
+                else
+                {
+                    throw new Exception("Не указано куда нужно добавить строку!");
+                }
+            } 
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+
         }
-        */
+
+        private void nDeleteStr_Click(object sender, EventArgs e)
+        {
+            ResetBColor();
+            try
+            {
+                if (dataGridView1.CurrentRow != null)
+                {
+                    dataGridView1.Rows.RemoveAt(dataGridView1.CurrentRow.Index);
+                }
+                else
+                {
+                    throw new Exception("Не указано какую строку нужно удалить!");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+        }
+
+        private void nRemoveStr_Click(object sender, EventArgs e)
+        {
+            ResetBColor();
+            try
+            {
+                if (dataGridView1.CurrentRow != null)
+                {
+                    int ind = dataGridView1.CurrentRow.Index;
+                    dataGridView1.Rows[ind].Cells[0].Value = "";
+                    dataGridView1.Rows[ind].Cells[1].Value = "";
+                    dataGridView1.Rows[ind].Cells[2].Value = "";
+
+                }
+                else
+                {
+                    throw new Exception("Не какую строку нужно очистить!");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+        }
+
+        private void ResetBColor()
+        {
+            for (int i = 0; i < dataGridView1.RowCount; i++)
+            {
+                for (int j = 0; j < dataGridView1.ColumnCount; j++)
+                {
+                    dataGridView1.Rows[i].Cells[j].Style.BackColor = Color.White;
+                }
+            }
+        }
+
+        private void mSearchSurname_Click(object sender, EventArgs e)
+        {
+            ResetBColor();
+            try
+            {
+                if (toolStripTextBox1.Text != "Поиск" && toolStripTextBox1.Text != "")
+                {
+                    int c = 0;
+                    for (int i = 0; i < dataGridView1.RowCount; i++)
+                    {
+                        dataGridView1.Rows[i].Selected = false;
+                        if (dataGridView1.Rows[i].Cells["Column1"].Value != null)
+                        {
+                            if (dataGridView1.Rows[i].Cells["Column1"].Value.ToString().Contains(toolStripTextBox1.Text))
+                            {
+                                dataGridView1.Rows[i].Cells["Column1"].Style.BackColor = Color.Aqua;
+                                c++;
+                            }
+                        }
+                    }
+                    if (c == 0)
+                    {
+                        MessageBox.Show("Фамилия не найдена", "", MessageBoxButtons.OK);
+                    }
+                    else
+                    {
+                        string res = "Фамилия появилась " + c.ToString() + " раз";
+                        MessageBox.Show(res, "", MessageBoxButtons.OK);
+                    }
+                } else
+                {
+                    throw new Exception("Ничего не введено в поиск!");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            
+        }
+
+        private void toolStripTextBox1_Enter(object sender, EventArgs e)
+        {
+            if (toolStripTextBox1.Text == "Поиск")
+            {
+                toolStripTextBox1.Text = "";
+                toolStripTextBox1.ForeColor = Color.Black;
+            }
+        }
+
+        private void toolStripTextBox1_Leave(object sender, EventArgs e)
+        {
+            if (toolStripTextBox1.Text == "")
+            {
+                toolStripTextBox1.Text = "Поиск";
+                toolStripTextBox1.ForeColor = Color.Gray;
+            }
+        }
+
+        private void mSearchName_Click(object sender, EventArgs e)
+        {
+            ResetBColor();
+            try
+            {
+                if (toolStripTextBox1.Text != "Поиск" && toolStripTextBox1.Text != "")
+                {
+
+                    int c = 0;
+                    for (int i = 0; i < dataGridView1.RowCount; i++)
+                    {
+                        dataGridView1.Rows[i].Selected = false;
+                        if (dataGridView1.Rows[i].Cells["Column2"].Value != null)
+                        {
+                            if (dataGridView1.Rows[i].Cells["Column2"].Value.ToString().Contains(toolStripTextBox1.Text))
+                            {
+                                dataGridView1.Rows[i].Cells["Column2"].Style.BackColor = Color.Aqua;
+                                c++;
+                            }
+                        }
+                    }
+                    if (c == 0)
+                    {
+                        MessageBox.Show("Название не найдено", "", MessageBoxButtons.OK);
+                    }
+                    else
+                    {
+                        string res = "Название появилось " + c.ToString() + " раз";
+                        MessageBox.Show(res, "", MessageBoxButtons.OK);
+                    }
+                }
+                else
+                {
+                    throw new Exception("Ничего не введено в поиск!");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+        }
+
+        private void mGive_Click(object sender, EventArgs e)
+        {
+            ResetBColor();
+            try
+            {
+                if (dataGridView1.CurrentRow != null)
+                {
+                    int index = dataGridView1.CurrentCell.RowIndex;
+                    int data;
+                    if (dataGridView1.Rows[index].Cells["Column3"].Value != null)
+                    {
+                        data = int.Parse(dataGridView1.Rows[index].Cells["Column3"].Value.ToString());
+                        if (data < 1)
+                        {
+                            throw new Exception("Книги закончились!");
+                        } else
+                        {
+                            dataGridView1.Rows[index].Cells["Column3"].Value = data - 1;
+                        }
+                    }
+                } 
+                else
+                {
+                    throw new Exception("Ничего не выбрано!");
+                }
+            } 
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+
+
+        }
+
+        private void mReturn_Click(object sender, EventArgs e)
+        {
+            ResetBColor();
+            try
+            {
+                if (dataGridView1.CurrentRow != null)
+                {
+                    int index = dataGridView1.CurrentCell.RowIndex;
+                    int data;
+                    if (dataGridView1.Rows[index].Cells["Column3"].Value != null)
+                    {
+                        data = int.Parse(dataGridView1.Rows[index].Cells["Column3"].Value.ToString());
+                        dataGridView1.Rows[index].Cells["Column3"].Value = data + 1;
+                    }
+                }
+                else
+                {
+                    throw new Exception("Ничего не выбрано!");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+        }
     }
 }
