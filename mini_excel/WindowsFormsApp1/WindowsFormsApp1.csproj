@@ -153,7 +153,31 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\" />
+    <None Include="Resources\icons8-мусор-20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-woff-20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-сохранить-20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-добавить-свойство-20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-удалить-навсегда-20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-поиск-20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-поиск-201.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-новая-копия-20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-выбрать-строку-20.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
