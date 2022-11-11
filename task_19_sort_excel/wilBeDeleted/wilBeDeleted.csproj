@@ -141,5 +141,8 @@
   <ItemGroup>
     <None Include="Resources\icons8-добавить-20.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-сортировать-по-алфавиту-с-начала-20.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

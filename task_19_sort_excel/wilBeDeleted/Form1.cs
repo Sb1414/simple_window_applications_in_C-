@@ -348,7 +348,6 @@ namespace wilBeDeleted
                 MessageBox.Show(ex.Message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
 
-
         }
 
         private void mReturn_Click(object sender, EventArgs e)
@@ -405,6 +404,7 @@ namespace wilBeDeleted
 
         private void mSortCount_Click(object sender, EventArgs e)
         {
+            dataGridView1.Columns["Column3"].ValueType = typeof(int);
             this.dataGridView1.Sort(this.dataGridView1.Columns["Column3"], ListSortDirection.Ascending);
         }
     }

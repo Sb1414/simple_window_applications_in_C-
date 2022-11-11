@@ -64,6 +64,7 @@
             this.mSortName = new System.Windows.Forms.ToolStripMenuItem();
             this.mSortCount = new System.Windows.Forms.ToolStripMenuItem();
             this.panelUp = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.buttonMaximiz = new System.Windows.Forms.Button();
             this.buttonMinimiz = new System.Windows.Forms.Button();
             this.buttonClose = new System.Windows.Forms.Button();
@@ -353,6 +354,7 @@
             // 
             // toolStripSplitButton1
             // 
+            this.toolStripSplitButton1.BackColor = System.Drawing.Color.BlanchedAlmond;
             this.toolStripSplitButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.toolStripSplitButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mSortAutor,
@@ -360,7 +362,7 @@
             this.mSortDate,
             this.mSortName,
             this.mSortCount});
-            this.toolStripSplitButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton1.Image")));
+            this.toolStripSplitButton1.Image = global::wilBeDeleted.Properties.Resources.icons8_сортировать_по_алфавиту_с_начала_20;
             this.toolStripSplitButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripSplitButton1.Name = "toolStripSplitButton1";
             this.toolStripSplitButton1.Size = new System.Drawing.Size(39, 24);
@@ -368,6 +370,7 @@
             // 
             // mSortAutor
             // 
+            this.mSortAutor.BackColor = System.Drawing.Color.BlanchedAlmond;
             this.mSortAutor.Name = "mSortAutor";
             this.mSortAutor.Size = new System.Drawing.Size(224, 26);
             this.mSortAutor.Text = "По автору";
@@ -375,6 +378,7 @@
             // 
             // mSortIzd
             // 
+            this.mSortIzd.BackColor = System.Drawing.Color.BlanchedAlmond;
             this.mSortIzd.Name = "mSortIzd";
             this.mSortIzd.Size = new System.Drawing.Size(224, 26);
             this.mSortIzd.Text = "По типу издания";
@@ -382,6 +386,7 @@
             // 
             // mSortDate
             // 
+            this.mSortDate.BackColor = System.Drawing.Color.BlanchedAlmond;
             this.mSortDate.Name = "mSortDate";
             this.mSortDate.Size = new System.Drawing.Size(224, 26);
             this.mSortDate.Text = "По дате выдачи";
@@ -389,6 +394,7 @@
             // 
             // mSortName
             // 
+            this.mSortName.BackColor = System.Drawing.Color.BlanchedAlmond;
             this.mSortName.Name = "mSortName";
             this.mSortName.Size = new System.Drawing.Size(224, 26);
             this.mSortName.Text = "По названию";
@@ -396,6 +402,7 @@
             // 
             // mSortCount
             // 
+            this.mSortCount.BackColor = System.Drawing.Color.BlanchedAlmond;
             this.mSortCount.Name = "mSortCount";
             this.mSortCount.Size = new System.Drawing.Size(224, 26);
             this.mSortCount.Text = "По количеству";
@@ -404,6 +411,7 @@
             // panelUp
             // 
             this.panelUp.BackColor = System.Drawing.Color.BlanchedAlmond;
+            this.panelUp.Controls.Add(this.label1);
             this.panelUp.Controls.Add(this.buttonMaximiz);
             this.panelUp.Controls.Add(this.buttonMinimiz);
             this.panelUp.Controls.Add(this.buttonClose);
@@ -415,17 +423,31 @@
             this.panelUp.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelUp_MouseDown);
             this.panelUp.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelUp_MouseMove);
             // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(472, 1);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(120, 23);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Библиотека";
+            this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelUp_MouseDown);
+            this.label1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelUp_MouseMove);
+            // 
             // buttonMaximiz
             // 
             this.buttonMaximiz.BackColor = System.Drawing.Color.Transparent;
             this.buttonMaximiz.BackgroundImage = global::wilBeDeleted.Properties.Resources.icons8_macos_полный_экран_20__1_;
-            this.buttonMaximiz.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.buttonMaximiz.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.buttonMaximiz.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonMaximiz.Dock = System.Windows.Forms.DockStyle.Left;
             this.buttonMaximiz.FlatAppearance.BorderSize = 0;
             this.buttonMaximiz.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonMaximiz.Location = new System.Drawing.Point(74, 3);
+            this.buttonMaximiz.Location = new System.Drawing.Point(56, 0);
             this.buttonMaximiz.Name = "buttonMaximiz";
-            this.buttonMaximiz.Size = new System.Drawing.Size(28, 31);
+            this.buttonMaximiz.Size = new System.Drawing.Size(28, 28);
             this.buttonMaximiz.TabIndex = 3;
             this.buttonMaximiz.UseVisualStyleBackColor = false;
             this.buttonMaximiz.Click += new System.EventHandler(this.buttonMaximiz_Click);
@@ -434,13 +456,14 @@
             // 
             this.buttonMinimiz.BackColor = System.Drawing.Color.Transparent;
             this.buttonMinimiz.BackgroundImage = global::wilBeDeleted.Properties.Resources.icons8_macos_свернуть_20__1_;
-            this.buttonMinimiz.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.buttonMinimiz.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.buttonMinimiz.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonMinimiz.Dock = System.Windows.Forms.DockStyle.Left;
             this.buttonMinimiz.FlatAppearance.BorderSize = 0;
             this.buttonMinimiz.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonMinimiz.Location = new System.Drawing.Point(37, 3);
+            this.buttonMinimiz.Location = new System.Drawing.Point(28, 0);
             this.buttonMinimiz.Name = "buttonMinimiz";
-            this.buttonMinimiz.Size = new System.Drawing.Size(27, 25);
+            this.buttonMinimiz.Size = new System.Drawing.Size(28, 28);
             this.buttonMinimiz.TabIndex = 2;
             this.buttonMinimiz.UseVisualStyleBackColor = false;
             this.buttonMinimiz.Click += new System.EventHandler(this.buttonMinimiz_Click);
@@ -449,13 +472,14 @@
             // 
             this.buttonClose.BackColor = System.Drawing.Color.Transparent;
             this.buttonClose.BackgroundImage = global::wilBeDeleted.Properties.Resources.icons8_macos_закрыть_20__1_;
-            this.buttonClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.buttonClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.buttonClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonClose.Dock = System.Windows.Forms.DockStyle.Left;
             this.buttonClose.FlatAppearance.BorderSize = 0;
             this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonClose.Location = new System.Drawing.Point(3, 3);
+            this.buttonClose.Location = new System.Drawing.Point(0, 0);
             this.buttonClose.Name = "buttonClose";
-            this.buttonClose.Size = new System.Drawing.Size(28, 31);
+            this.buttonClose.Size = new System.Drawing.Size(28, 28);
             this.buttonClose.TabIndex = 1;
             this.buttonClose.UseVisualStyleBackColor = false;
             this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
@@ -478,6 +502,7 @@
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.panelUp.ResumeLayout(false);
+            this.panelUp.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -522,6 +547,7 @@
         private System.Windows.Forms.ToolStripMenuItem mSortDate;
         private System.Windows.Forms.ToolStripMenuItem mSortName;
         private System.Windows.Forms.ToolStripMenuItem mSortCount;
+        private System.Windows.Forms.Label label1;
     }
 }
 

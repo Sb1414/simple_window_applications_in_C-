@@ -311,14 +311,15 @@
             // 
             this.buttonMaximiz.BackColor = System.Drawing.Color.Transparent;
             this.buttonMaximiz.BackgroundImage = global::wilBeDeleted.Properties.Resources.icons8_macos_полный_экран_20__1_;
-            this.buttonMaximiz.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.buttonMaximiz.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.buttonMaximiz.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonMaximiz.Dock = System.Windows.Forms.DockStyle.Left;
             this.buttonMaximiz.FlatAppearance.BorderSize = 0;
             this.buttonMaximiz.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonMaximiz.Location = new System.Drawing.Point(78, 5);
+            this.buttonMaximiz.Location = new System.Drawing.Point(56, 0);
             this.buttonMaximiz.Name = "buttonMaximiz";
-            this.buttonMaximiz.Size = new System.Drawing.Size(28, 31);
-            this.buttonMaximiz.TabIndex = 3;
+            this.buttonMaximiz.Size = new System.Drawing.Size(28, 28);
+            this.buttonMaximiz.TabIndex = 6;
             this.buttonMaximiz.UseVisualStyleBackColor = false;
             this.buttonMaximiz.Click += new System.EventHandler(this.buttonMaximiz_Click);
             // 
@@ -326,14 +327,15 @@
             // 
             this.buttonMinimiz.BackColor = System.Drawing.Color.Transparent;
             this.buttonMinimiz.BackgroundImage = global::wilBeDeleted.Properties.Resources.icons8_macos_свернуть_20__1_;
-            this.buttonMinimiz.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.buttonMinimiz.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.buttonMinimiz.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonMinimiz.Dock = System.Windows.Forms.DockStyle.Left;
             this.buttonMinimiz.FlatAppearance.BorderSize = 0;
             this.buttonMinimiz.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonMinimiz.Location = new System.Drawing.Point(41, 5);
+            this.buttonMinimiz.Location = new System.Drawing.Point(28, 0);
             this.buttonMinimiz.Name = "buttonMinimiz";
-            this.buttonMinimiz.Size = new System.Drawing.Size(27, 25);
-            this.buttonMinimiz.TabIndex = 2;
+            this.buttonMinimiz.Size = new System.Drawing.Size(28, 28);
+            this.buttonMinimiz.TabIndex = 5;
             this.buttonMinimiz.UseVisualStyleBackColor = false;
             this.buttonMinimiz.Click += new System.EventHandler(this.buttonMinimiz_Click);
             // 
@@ -341,14 +343,15 @@
             // 
             this.buttonClose.BackColor = System.Drawing.Color.Transparent;
             this.buttonClose.BackgroundImage = global::wilBeDeleted.Properties.Resources.icons8_macos_закрыть_20__1_;
-            this.buttonClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.buttonClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.buttonClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonClose.Dock = System.Windows.Forms.DockStyle.Left;
             this.buttonClose.FlatAppearance.BorderSize = 0;
             this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonClose.Location = new System.Drawing.Point(7, 5);
+            this.buttonClose.Location = new System.Drawing.Point(0, 0);
             this.buttonClose.Name = "buttonClose";
-            this.buttonClose.Size = new System.Drawing.Size(28, 31);
-            this.buttonClose.TabIndex = 1;
+            this.buttonClose.Size = new System.Drawing.Size(28, 28);
+            this.buttonClose.TabIndex = 4;
             this.buttonClose.UseVisualStyleBackColor = false;
             this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
             // 
@@ -376,9 +379,6 @@
         #endregion
         private System.Windows.Forms.Panel panelBorder;
         private System.Windows.Forms.Panel panelUp;
-        private System.Windows.Forms.Button buttonMaximiz;
-        private System.Windows.Forms.Button buttonMinimiz;
-        private System.Windows.Forms.Button buttonClose;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Label label1;
@@ -397,5 +397,8 @@
         public System.Windows.Forms.DateTimePicker dateTimePickerDate;
         public System.Windows.Forms.ComboBox comboBoxType;
         public System.Windows.Forms.NumericUpDown numericUpDownCount;
+        private System.Windows.Forms.Button buttonMaximiz;
+        private System.Windows.Forms.Button buttonMinimiz;
+        private System.Windows.Forms.Button buttonClose;
     }
 }

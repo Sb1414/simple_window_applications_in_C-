@@ -193,6 +193,16 @@ namespace wilBeDeleted.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_сортировать_по_алфавиту_с_начала_20 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-сортировать-по-алфавиту-с-начала-20", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_сохранить_20 {
             get {
                 object obj = ResourceManager.GetObject("icons8-сохранить-20", resourceCulture);
