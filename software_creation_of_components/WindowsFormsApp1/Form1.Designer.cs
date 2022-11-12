@@ -65,9 +65,9 @@
             // 
             // buttonClose
             // 
-            this.buttonClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(128)))), ((int)(((byte)(87)))));
             this.buttonClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonClose.Dock = System.Windows.Forms.DockStyle.Right;
             this.buttonClose.FlatAppearance.BorderSize = 0;
             this.buttonClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(237)))), ((int)(((byte)(209)))));
             this.buttonClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(219)))), ((int)(((byte)(184)))));
@@ -75,7 +75,7 @@
             this.buttonClose.Font = new System.Drawing.Font("Arial Black", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.buttonClose.Location = new System.Drawing.Point(541, 0);
             this.buttonClose.Name = "buttonClose";
-            this.buttonClose.Size = new System.Drawing.Size(34, 33);
+            this.buttonClose.Size = new System.Drawing.Size(34, 35);
             this.buttonClose.TabIndex = 0;
             this.buttonClose.Text = "x";
             this.buttonClose.UseVisualStyleBackColor = false;
@@ -93,10 +93,12 @@
             // 
             // textBoxInput
             // 
+            this.textBoxInput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(199)))), ((int)(((byte)(169)))));
+            this.textBoxInput.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxInput.Location = new System.Drawing.Point(212, 54);
+            this.textBoxInput.Location = new System.Drawing.Point(211, 59);
             this.textBoxInput.Name = "textBoxInput";
-            this.textBoxInput.Size = new System.Drawing.Size(196, 26);
+            this.textBoxInput.Size = new System.Drawing.Size(196, 19);
             this.textBoxInput.TabIndex = 3;
             this.textBoxInput.Enter += new System.EventHandler(this.textBoxInput_Enter);
             this.textBoxInput.Leave += new System.EventHandler(this.textBoxInput_Leave);
@@ -130,7 +132,7 @@
             this.buttonRemove.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(219)))), ((int)(((byte)(184)))));
             this.buttonRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonRemove.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonRemove.Location = new System.Drawing.Point(434, 96);
+            this.buttonRemove.Location = new System.Drawing.Point(434, 98);
             this.buttonRemove.Name = "buttonRemove";
             this.buttonRemove.Size = new System.Drawing.Size(120, 26);
             this.buttonRemove.TabIndex = 4;
@@ -144,6 +146,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(186)))), ((int)(((byte)(158)))));
             this.ClientSize = new System.Drawing.Size(575, 366);
             this.Controls.Add(this.buttonRemove);
             this.Controls.Add(this.buttonGenerate);

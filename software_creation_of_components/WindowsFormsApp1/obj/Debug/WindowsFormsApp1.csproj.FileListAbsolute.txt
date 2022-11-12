@@ -9,3 +9,14 @@ C:\Users\Сабина\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\W
 C:\Users\Сабина\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
 C:\Users\Сабина\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 C:\Users\Сабина\source\repos\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\Сабина\Downloads\n\simple_window_applications_in_C-\software_creation_of_components\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\Сабина\Downloads\n\simple_window_applications_in_C-\software_creation_of_components\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\Сабина\Downloads\n\simple_window_applications_in_C-\software_creation_of_components\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\Сабина\Downloads\n\simple_window_applications_in_C-\software_creation_of_components\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
+C:\Users\Сабина\Downloads\n\simple_window_applications_in_C-\software_creation_of_components\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.SuggestedBindingRedirects.cache
+C:\Users\Сабина\Downloads\n\simple_window_applications_in_C-\software_creation_of_components\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+C:\Users\Сабина\Downloads\n\simple_window_applications_in_C-\software_creation_of_components\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\Сабина\Downloads\n\simple_window_applications_in_C-\software_creation_of_components\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\Users\Сабина\Downloads\n\simple_window_applications_in_C-\software_creation_of_components\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Users\Сабина\Downloads\n\simple_window_applications_in_C-\software_creation_of_components\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\Сабина\Downloads\n\simple_window_applications_in_C-\software_creation_of_components\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb

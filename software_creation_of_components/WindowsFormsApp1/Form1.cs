@@ -14,6 +14,7 @@ namespace WindowsFormsApp1
 {
     public partial class Form1 : Form
     {
+        public int ClickCount { get; }
         public Form1()
         {
             InitializeComponent();
@@ -86,6 +87,7 @@ namespace WindowsFormsApp1
                     this.Controls.Add(buttonAdd);
                     this.CenterToScreen();
 
+                    addLabel();
                     buttonRemove.Visible = true;
                 }
             }
@@ -94,6 +96,35 @@ namespace WindowsFormsApp1
                 MessageBox.Show("Only numbers, please!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             
+        }
+        System.Windows.Forms.Label labelDouble = new System.Windows.Forms.Label();
+
+        private void addLabel()
+        {          
+            Button buttonDouble = new Button();
+
+            labelDouble.Text = "Hello World!";
+            labelDouble.Location = new Point(320, buttonRemove.Bottom+20);
+            labelDouble.AutoSize = true;
+            this.Controls.Add(labelDouble);
+            
+            buttonDouble.Text = "Изменить";
+            buttonDouble.Location = new Point(317, labelDouble.Top + 20);
+            buttonDouble.Click += new EventHandler(buttonDouble_DoubleClick);
+            buttonDouble.BackColor = Color.FromArgb(34, 128, 87);
+            buttonDouble.FlatStyle = FlatStyle.Flat;
+            buttonDouble.FlatAppearance.BorderSize = 0;
+            this.Controls.Add(buttonDouble);
+            this.CenterToScreen();
+        }
+
+        private void buttonDouble_DoubleClick(object sender, EventArgs e)
+        {
+                FontDialog fn = new FontDialog();
+                if (fn.ShowDialog() == DialogResult.OK)
+                {
+                    labelDouble.Font = fn.Font;
+                }
         }
 
         private void buttonAdd_Click(object sender, EventArgs e)
@@ -144,5 +175,6 @@ namespace WindowsFormsApp1
                 // this.Controls.Remove(labelInput);
             }
         }
+
     }
 }
